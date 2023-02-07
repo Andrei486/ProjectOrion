@@ -1,0 +1,662 @@
+{
+  "Ships": [
+    {
+      "Name": "Emblem-Class Frigate",
+      "Class": "ESCORT",
+      "Stats": {
+        "HP": 24,
+        "Shields": 8,
+        "Armour": 2,
+        "Evasion": 8,
+        "Speed": 6,
+        "Reactor": 6,
+        "Sensors": 8,
+        "Signature": 5,
+        "Ammo": 16,
+        "Restores": 3
+      },
+      "SystemSlots": 3,
+      "PointCost": 2,
+      "Traits": {
+        "CIC Automation": "This ship may take an additional action during the action phase.",
+        "Efficient Point Defense": "When firing Turret and Omni Mounts as PD, reduce the Ammo and Power Costs by 1, to a minimum of 0."
+      },
+      "Mounts": [
+        {
+          "Size": 2,
+          "Count": 1,
+          "Type": "FIXED",
+          "MainArc": "FORWARD",
+          "IsSpinal": true,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "PORT",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "STARBOARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "OMNI",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        }
+      ],
+      "Bays": [
+        {
+          "Size": 2,
+          "Count": 2,
+          "Arcs": [ "PORT" ],
+          "Craft": null
+        },
+        {
+          "Size": 2,
+          "Count": 2,
+          "Arcs": [ "STARBOARD" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Arcs": [ "PORT", "STARBOARD", "REAR" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Arcs": [ "PORT", "STARBOARD", "REAR" ],
+          "Craft": null
+        }
+      ]
+    },
+    {
+      "Name": "Sparrow-Class Corvette",
+      "Class": "ESCORT",
+      "Stats": {
+        "HP": 16,
+        "Shields": 6,
+        "Armour": 1,
+        "Evasion": 10,
+        "Speed": 8,
+        "Reactor": 4,
+        "Sensors": 8,
+        "Signature": 3,
+        "Ammo": 16,
+        "Restores": 3
+      },
+      "SystemSlots": 2,
+      "PointCost": 1,
+      "Traits": {
+        "Nimble": "This ship may make an additional heading adjustment during the Movement Phase."
+      },
+      "Mounts": [
+        {
+          "Size": 2,
+          "Count": 2,
+          "Type": "FIXED",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "OMNI",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        }
+      ],
+      "Bays": [
+        {
+          "Size": 2,
+          "Count": 2,
+          "Arcs": [ "PORT", "STARBOARD", "REAR" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Arcs": [ "FORWARD", "PORT", "REAR" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Arcs": [ "FORWARD", "STARBOARD", "REAR" ],
+          "Craft": null
+        }
+      ]
+    },
+    {
+
+      "Name": "Narwhal-Class Monitor",
+      "Class": "ESCORT",
+      "Stats": {
+        "HP": 12,
+        "Shields": 4,
+        "Armour": 1,
+        "Evasion": 5,
+        "Speed": 4,
+        "Reactor": 6,
+        "Sensors": 3,
+        "Signature": 4,
+        "Ammo": 16,
+        "Restores": 3
+      },
+      "SystemSlots": 2,
+      "PointCost": 2,
+      "Traits": {
+        "Fine Adjust": "This ship makes attacks with Spinal weapons with +1 Accuracy.",
+        "Watchman": "This ship gains the Firing Preparations action.\nFiring Preparations: Until the start of your next Command Phase, this ship may make an attack against any hostile Unit that moves through its Spinal Arc using its Spinal Weapon."
+      },
+      "Mounts": [
+        {
+          "Size": 4,
+          "Count": 1,
+          "Type": "FIXED",
+          "MainArc": "FORWARD",
+          "IsSpinal": true,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "OMNI",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        }
+      ],
+      "Bays": []
+    },
+    {
+      "Name": "Cheng-Class Destroyer",
+      "Class": "LINE",
+      "Stats": {
+        "HP": 35,
+        "Shields": 15,
+        "Armour": 4,
+        "Evasion": 7,
+        "Speed": 6,
+        "Reactor": 6,
+        "Sensors": 6,
+        "Signature": 7,
+        "Ammo": 24,
+        "Restores": 4
+      },
+      "SystemSlots": 3,
+      "PointCost": 3,
+      "Traits": {
+        "Withering Broadsides": "When you hit a Ship with a Fixed Weapon, clear 1 Lock.",
+        "Ammo Efficiency": "When this Ship fires a Mount, reduce the Ammo cost by 2, to a minimum of 1."
+      },
+      "Mounts": [
+        {
+          "Size": 3,
+          "Count": 2,
+          "Type": "FIXED",
+          "MainArc": "PORT",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 3,
+          "Count": 2,
+          "Type": "FIXED",
+          "MainArc": "STARBOARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 4,
+          "Type": "FIXED",
+          "MainArc": "PORT",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 4,
+          "Type": "FIXED",
+          "MainArc": "STARBOARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "OMNI",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        }
+      ],
+      "Bays": [
+        {
+          "Size": 2,
+          "Count": 2,
+          "Arcs": [ "FORWARD" ],
+          "Craft": null
+        },
+        {
+          "Size": 3,
+          "Count": 2,
+          "Arcs": [ "REAR" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Arcs": [ "PORT", "STARBOARD", "REAR" ],
+          "Craft": null
+        }
+      ]
+    },
+    {
+      "Name": "Proxima-Class Cruiser",
+      "Class": "LINE",
+      "Stats": {
+        "HP": 42,
+        "Shields": 18,
+        "Armour": 5,
+        "Evasion": 6,
+        "Speed": 6,
+        "Reactor": 8,
+        "Sensors": 6,
+        "Signature": 8,
+        "Ammo": 24,
+        "Restores": 4
+      },
+      "SystemSlots": 3,
+      "PointCost": 4,
+      "Traits": {
+        "Vindicator FCS": "Whenever an allied ship in visual range is targeted by a weapon attack, this ship may fire one of its mounts at the attacking unit as reaction, provided it has range, line of sight and vision.",
+        "Shipshape": "When you take System Damage to reduce the damage of an Attack, reduce the damage by an additional 1d6."
+      },
+      "Mounts": [
+        {
+          "Size": 3,
+          "Count": 1,
+          "Type": "FIXED",
+          "MainArc": "FORWARD",
+          "IsSpinal": true,
+          "Weapon": null
+        },
+        {
+          "Size": 3,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 3,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 3,
+          "Count": 3,
+          "Type": "FIXED",
+          "MainArc": "PORT",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 3,
+          "Count": 3,
+          "Type": "FIXED",
+          "MainArc": "STARBOARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "PORT",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "STARBOARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 4,
+          "Type": "TURRET",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Type": "OMNI",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        }
+      ],
+      "Bays": [
+        {
+          "Size": 3,
+          "Count": 2,
+          "Arcs": [ "FORWARD" ],
+          "Craft": null
+        },
+        {
+          "Size": 2,
+          "Count": 4,
+          "Arcs": [ "PORT", "STARBOARD", "REAR" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Arcs": [ "PORT", "STARBOARD", "REAR" ],
+          "Craft": null
+        }
+      ]
+    },
+    {
+      "Name": "Saga-Class Cruiser",
+      "Class": "LINE",
+      "Stats": {
+        "HP": 56,
+        "Shields": 12,
+        "Armour": 6,
+        "Evasion": 5,
+        "Speed": 5,
+        "Reactor": 10,
+        "Sensors": 6,
+        "Signature": 8,
+        "Ammo": 24,
+        "Restores": 4
+      },
+      "SystemSlots": 3,
+      "PointCost": 4,
+      "Traits": {
+        "Direct Reactor Hookup": "When this Ship fires a Mount, reduce the Power cost by 2, to a minimum of 1."
+      },
+      "Mounts": [
+        {
+          "Size": 2,
+          "Count": 2,
+          "Type": "FIXED",
+          "MainArc": "FORWARD",
+          "IsSpinal": true,
+          "Weapon": null
+        },
+        {
+          "Size": 4,
+          "Count": 2,
+          "Type": "OMNI",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 4,
+          "Count": 2,
+          "Type": "OMNI",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "PORT",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "STARBOARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        }
+      ],
+      "Bays": [
+        {
+          "Size": 3,
+          "Count": 2,
+          "Arcs": [ "REAR" ],
+          "Craft": null
+        },
+        {
+          "Size": 2,
+          "Count": 2,
+          "Arcs": [ "FORWARD", "PORT", "STARBOARD" ],
+          "Craft": null
+        },
+        {
+          "Size": 2,
+          "Count": 2,
+          "Arcs": [ "FORWARD", "PORT", "STARBOARD" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 3,
+          "Arcs": [ "FORWARD", "PORT", "STARBOARD" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 3,
+          "Arcs": [ "FORWARD", "PORT", "STARBOARD" ],
+          "Craft": null
+        }
+      ]
+    },
+    {
+      "Name": "Elena-Class Heavy Cruiser",
+      "Class": "CAPITAL",
+      "Stats": {
+        "HP": 70,
+        "Shields": 16,
+        "Armour": 7,
+        "Evasion": 5,
+        "Speed": 5,
+        "Reactor": 10,
+        "Sensors": 6,
+        "Signature": 10,
+        "Ammo": 32,
+        "Restores": 6
+      },
+      "SystemSlots": 3,
+      "PointCost": 6,
+      "Traits": {
+        "Vindicator FCS": "Whenever an allied ship in visual range is targeted by a weapon attack, this ship may fire one of its mounts at the attacking unit as reaction, provided it has range, line of sight and vision.",
+        "Patience": "Weapons with the Reload Tag gain +1 Accuracy on attack."
+      },
+      "Mounts": [
+        {
+          "Size": 4,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 4,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 4,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 4,
+          "Count": 2,
+          "Type": "OMNI",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "PORT",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "STARBOARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "OMNI",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        }
+      ],
+      "Bays": [
+        {
+          "Size": 3,
+          "Count": 2,
+          "Arcs": [ "PORT" ],
+          "Craft": null
+        },
+        {
+          "Size": 3,
+          "Count": 2,
+          "Arcs": [ "STARBOARD" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Arcs": [ "PORT", "STARBOARD", "REAR" ],
+          "Craft": null
+        }
+      ]
+    }
+  ]
+}

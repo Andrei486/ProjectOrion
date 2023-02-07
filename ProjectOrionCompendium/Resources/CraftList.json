@@ -1,0 +1,226 @@
+{
+  "Deployables": [
+    {
+      "Name": "Chaff",
+      "Stats": {
+        "HP": 0,
+        "Armour": 0,
+        "Evasion": 0,
+        "Speed": 0
+      },
+      "Size": 1,
+      "PowerCost": 0,
+      "AmmoCost": 1,
+      "Tags": [ "Deployable", "PD", "Mayfly", "Highlander" ]
+    },
+    {
+      "Name": "Communications Beacon",
+      "Stats": {
+        "HP": 3,
+        "Armour": 0,
+        "Evasion": 6,
+        "Speed": 0
+      },
+      "Size": 1,
+      "PowerCost": 0,
+      "AmmoCost": 1,
+      "Tags": [ "Deployable", "Launch 3", "Highlander" ]
+    },
+    {
+      "Name": "Sensors Beacon",
+      "Stats": {
+        "HP": 5,
+        "Armour": 0,
+        "Evasion": 6,
+        "Speed": 0,
+        "Sensors": 8
+      },
+      "Size": 2,
+      "PowerCost": 0,
+      "AmmoCost": 2,
+      "Tags": [ "Deployable", "Launch 3", "Highlander" ]
+    }
+  ],
+  "Payloads": [
+    {
+      "Name": "Gladiator Interceptor Missiles",
+      "Size": 1,
+      "Stats": {
+        "HP": 1,
+        "Armour": 0,
+        "Evasion": 10,
+        "Speed": 5
+      },
+      "PowerCost": 0,
+      "AmmoCost": 1,
+      "ArmorPenetration": 0,
+      "Damage": "3",
+      "Tags": [ "Missile", "Swarm 2", "Launch 5", "Mayfly" ]
+    },
+    {
+      "Name": "Spartan Interceptor Missiles",
+      "Size": 1,
+      "Stats": {
+        "HP": 1,
+        "Armour": 0,
+        "Evasion": 8,
+        "Speed": 4
+      },
+      "PowerCost": 0,
+      "AmmoCost": 1,
+      "ArmorPenetration": 1,
+      "Damage": "3",
+      "Tags": [ "Missile", "Swarm 3", "Launch 4", "Mayfly" ]
+    },
+    {
+      "Name": "Tracking Beacon",
+      "Size": 1,
+      "Stats": {
+        "HP": 1,
+        "Armour": 0,
+        "Evasion": 10,
+        "Speed": 8
+      },
+      "PowerCost": 0,
+      "AmmoCost": 1,
+      "ArmorPenetration": 0,
+      "Damage": "0",
+      "Tags": [ "Missile", "Lock 3" ]
+    },
+    {
+      "Name": "Scrambler Pods",
+      "Size": 1,
+      "Stats": {
+        "HP": 1,
+        "Armour": 0,
+        "Evasion": 8,
+        "Speed": 6
+      },
+      "PowerCost": 0,
+      "AmmoCost": 1,
+      "ArmorPenetration": 0,
+      "Damage": "0",
+      "Tags": [ "Missile", "Jam 4" ]
+    },
+    {
+      "Name": "Light Missile",
+      "Size": 2,
+      "Stats": {
+        "HP": 3,
+        "Armour": 0,
+        "Evasion": 8,
+        "Speed": 8
+      },
+      "PowerCost": 0,
+      "AmmoCost": 1,
+      "ArmorPenetration": 6,
+      "Damage": "2d6+2",
+      "Tags": [ "Missile" ]
+    },
+    {
+      "Name": "2x2 Swarm Missile Cell",
+      "Size": 2,
+      "Stats": {
+        "HP": 1,
+        "Armour": 0,
+        "Evasion": 7,
+        "Speed": 7
+      },
+      "PowerCost": 0,
+      "AmmoCost": 1,
+      "ArmorPenetration": 5,
+      "Damage": "1d3",
+      "Tags": [ "Missile", "Swarm 4" ]
+    },
+    {
+      "Name": "Light Sprint Missile",
+      "Size": 2,
+      "Stats": {
+        "HP": 2,
+        "Armour": 0,
+        "Evasion": 8,
+        "Speed": 6
+      },
+      "PowerCost": 0,
+      "AmmoCost": 1,
+      "ArmorPenetration": 8,
+      "Damage": "3d6+2",
+      "Tags": [ "Missile", "Sprints", "Reload 1" ]
+    },
+    {
+      "Name": "Light Torpedo",
+      "Size": 2,
+      "Stats": {
+        "HP": 6,
+        "Armour": 1,
+        "Evasion": 6,
+        "Speed": 10
+      },
+      "PowerCost": 0,
+      "AmmoCost": 1,
+      "ArmorPenetration": 8,
+      "Damage": "4d6+4",
+      "Tags": [ "Torpedo", "Phasing", "Reload 1" ]
+    },
+    {
+      "Name": "Standard Missile",
+      "Size": 3,
+      "Stats": {
+        "HP": 6,
+        "Armour": 1,
+        "Evasion": 8,
+        "Speed": 8
+      },
+      "PowerCost": 0,
+      "AmmoCost": 2,
+      "ArmorPenetration": 8,
+      "Damage": "4d6+3",
+      "Tags": [ "Missile" ]
+    },
+    {
+      "Name": "4x2 Swarm Missile Cell",
+      "Size": 3,
+      "Stats": {
+        "HP": 1,
+        "Armour": 0,
+        "Evasion": 7,
+        "Speed": 7
+      },
+      "PowerCost": 0,
+      "AmmoCost": 2,
+      "ArmorPenetration": 5,
+      "Damage": "1d3",
+      "Tags": [ "Missile", "Swarm 8" ]
+    },
+    {
+      "Name": "Standard Sprint Missile",
+      "Size": 3,
+      "Stats": {
+        "HP": 4,
+        "Armour": 0,
+        "Evasion": 8,
+        "Speed": 6
+      },
+      "PowerCost": 0,
+      "AmmoCost": 2,
+      "ArmorPenetration": 10,
+      "Damage": "5d6+4",
+      "Tags": [ "Missile", "Sprints", "Reload 1" ]
+    },
+    {
+      "Name": "Standard Torpedo",
+      "Size": 3,
+      "Stats": {
+        "HP": 9,
+        "Armour": 1,
+        "Evasion": 5,
+        "Speed": 10
+      },
+      "PowerCost": 0,
+      "AmmoCost": 2,
+      "ArmorPenetration": 10,
+      "Damage": "7d6+5",
+      "Tags": [ "Torpedo", "Phasing", "Reload 1" ]
+    }
+  ]
+}

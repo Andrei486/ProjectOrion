@@ -1,0 +1,13 @@
+{
+  "ESCORT": {
+    "Maneuverable": "This ship may make two heading adjustments instead of one during the Movement Phase."
+  },
+  "LINE": {
+    "Superior Shielding": "When using Charge Shields, this ship generates +1 Shields per Power spent."
+  },
+  "CAPITAL": {
+    "Supreme Shielding": "When using Charge Shields, this ship generates +2 Shields per Power spent.",
+    "Well Defended": "When this ship takes system damage to reduce damage, reduce the damage taken by 2d6 instead of 1d6.",
+    "Poor Steering": "This ship can only adjust its heading at the end of its Movement Phase."
+  }
+}

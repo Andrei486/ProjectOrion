@@ -1,0 +1,134 @@
+{
+  "Default": [
+    {
+      "Name": "Engine",
+      "Description": "Provides speed",
+      "Slots": 0,
+      "HitPoints": 3,
+      "BubbleText": [ "-", "\u00bd", "0" ],
+      "EquippableClasses": null
+    },
+    {
+      "Name": "Reactor",
+      "Description": "Provides power",
+      "Slots": 0,
+      "HitPoints": 3,
+      "BubbleText": [ "-", "\u00bd", "0" ],
+      "EquippableClasses": null
+    },
+    {
+      "Name": "Shield Gen.",
+      "Description": "Provides shields",
+      "Slots": 0,
+      "HitPoints": 2,
+      "BubbleText": [ "\u00bd", "0" ],
+      "EquippableClasses": null
+    },
+    {
+      "Name": "Radar",
+      "Description": "Provides sensors",
+      "Slots": 0,
+      "HitPoints": 2,
+      "BubbleText": [ "\u00bd", "0" ],
+      "EquippableClasses": null
+    },
+    {
+      "Name": "Comms",
+      "Description": "Provides comms",
+      "Slots": 0,
+      "HitPoints": 2,
+      "BubbleText": [ "-", "0" ],
+      "EquippableClasses": null
+    },
+    {
+      "Name": "Magazine",
+      "Description": "On DMG, -4 Ammo",
+      "Slots": 0,
+      "HitPoints": 0,
+      "BubbleText": [],
+      "EquippableClasses": null
+    },
+    {
+      "Name": "DC Locker",
+      "Description": "On DMG, -2 Restores",
+      "Slots": 0,
+      "HitPoints": 0,
+      "BubbleText": [],
+      "EquippableClasses": null
+    }
+  ],
+  "Slots": [
+    {
+      "Name": "Magazine Expansion",
+      "Description": "+16 Ammo",
+      "Slots": 1,
+      "HitPoints": 0,
+      "BubbleText": [],
+      "EquippableClasses": null
+    },
+    {
+      "Name": "Reinforced Magazine",
+      "Description": "+8 Ammo; -2 Ammo on magazine DMG",
+      "Slots": 1,
+      "HitPoints": 0,
+      "BubbleText": [],
+      "EquippableClasses": null
+    },
+    {
+      "Name": "Bulk Magazine",
+      "Description": "+40 Ammo",
+      "Slots": 2,
+      "HitPoints": 0,
+      "BubbleText": [],
+      "EquippableClasses": null
+    },
+    {
+      "Name": "Expanded DC Locker",
+      "Description": "+2 Restores",
+      "Slots": 1,
+      "HitPoints": 0,
+      "BubbleText": [],
+      "EquippableClasses": null
+    },
+    {
+      "Name": "Reinforced DC Locker",
+      "Description": "+1 Restore; -1 Restore on locker DMG",
+      "Slots": 1,
+      "HitPoints": 0,
+      "BubbleText": [],
+      "EquippableClasses": null
+    },
+    {
+      "Name": "Reactor Booster",
+      "Description": "+2 Reactor/Power",
+      "Slots": 1,
+      "HitPoints": 0,
+      "BubbleText": [],
+      "EquippableClasses": null
+    },
+    {
+      "Name": "Engine Booster",
+      "Description": "+1 Speed",
+      "Slots": 1,
+      "HitPoints": 0,
+      "BubbleText": [],
+      "EquippableClasses": null
+    },
+    {
+      "Name": "Radar Booster",
+      "Description": "+2 Sensors",
+      "Slots": 1,
+      "HitPoints": 0,
+      "BubbleText": [],
+      "EquippableClasses": [ "ESCORT" ]
+    },
+    {
+      "Name": "Armour Plating",
+      "Description": "+1 Armour",
+      "Slots": 1,
+      "HitPoints": 0,
+      "BubbleText": [],
+      "EquippableClasses": [ "LINE", "CAPITAL" ]
+    }
+  ]
+}

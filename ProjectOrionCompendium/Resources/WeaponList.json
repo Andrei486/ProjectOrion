@@ -1,0 +1,264 @@
+{
+  "Weapons": [
+    {
+      "Name": "Guardian Laser",
+      "Size": 1,
+      "Range": 8,
+      "PowerCost": 1,
+      "AmmoCost": 0,
+      "ArmorPenetration": 1,
+      "Damage": "1d3+1",
+      "Tags": [ "PD", "Accurate 2", "Reliable 2" ]
+    },
+    {
+      "Name": "Autocannon",
+      "Size": 1,
+      "Range": 4,
+      "PowerCost": 0,
+      "AmmoCost": 1,
+      "ArmorPenetration": 2,
+      "Damage": "1d3+1",
+      "Tags": [ "PD", "Shots 2" ]
+    },
+    {
+      "Name": "Flak Cannon",
+      "Size": 1,
+      "Range": 2,
+      "PowerCost": 0,
+      "AmmoCost": 1,
+      "ArmorPenetration": 0,
+      "Damage": "1",
+      "Tags": [ "PD", "Shots 1d6", "Shrapnel" ]
+    },
+    {
+      "Name": "Coilgun",
+      "Size": 1,
+      "Range": 10,
+      "PowerCost": 1,
+      "AmmoCost": 1,
+      "ArmorPenetration": 4,
+      "Damage": "1d3+4",
+      "Tags": [ "PD", "Accurate 1", "Reload 1" ]
+    },
+    {
+      "Name": "Targeting Radar",
+      "Size": 1,
+      "Range": 20,
+      "PowerCost": 1,
+      "AmmoCost": 0,
+      "ArmorPenetration": 0,
+      "Damage": "0",
+      "Tags": [ "EWAR", "Lock 2" ]
+    },
+    {
+      "Name": "Jamming Array",
+      "Size": 1,
+      "Range": 10,
+      "PowerCost": 1,
+      "AmmoCost": 0,
+      "ArmorPenetration": 0,
+      "Damage": "0",
+      "Tags": [ "EWAR", "Jam 2" ]
+    },
+    {
+      "Name": "Light Cannon",
+      "Size": 2,
+      "Range": 8,
+      "PowerCost": 0,
+      "AmmoCost": 1,
+      "ArmorPenetration": 3,
+      "Damage": "1d6+2",
+      "Tags": []
+    },
+    {
+      "Name": "Light Laser",
+      "Size": 2,
+      "Range": 12,
+      "PowerCost": 1,
+      "AmmoCost": 0,
+      "ArmorPenetration": 2,
+      "Damage": "1d3+2",
+      "Tags": [ "Accurate 2" ]
+    },
+    {
+      "Name": "Plasma Caster",
+      "Size": 2,
+      "Range": 4,
+      "PowerCost": 1,
+      "AmmoCost": 0,
+      "ArmorPenetration": 6,
+      "Damage": "1d3+3",
+      "Tags": [ "Accurate 1", "Reload 1" ]
+    },
+    {
+      "Name": "Light Railgun",
+      "Size": 2,
+      "Range": 16,
+      "PowerCost": 1,
+      "AmmoCost": 1,
+      "ArmorPenetration": 6,
+      "Damage": "1d6+2",
+      "Tags": [ "Accurate 1", "Reload 1" ]
+    },
+    {
+      "Name": "Tractor Beam",
+      "Size": 2,
+      "Range": 6,
+      "PowerCost": 1,
+      "AmmoCost": 0,
+      "ArmorPenetration": 30,
+      "Damage": "0",
+      "Tags": [ "EWAR", "Slow 3" ]
+    },
+    {
+      "Name": "Aegis Laser",
+      "Size": 2,
+      "Range": 8,
+      "PowerCost": 2,
+      "AmmoCost": 0,
+      "ArmorPenetration": 1,
+      "Damage": "1d3+1",
+      "Tags": [ "PD", "Shots 2", "Accurate 2", "Reliable 2" ]
+    },
+    {
+      "Name": "Dual Autocannons",
+      "Size": 2,
+      "Range": 4,
+      "PowerCost": 0,
+      "AmmoCost": 2,
+      "ArmorPenetration": 2,
+      "Damage": "1d3+1",
+      "Tags": [ "PD", "Shots 4" ]
+    },
+    {
+      "Name": "Dual Flak Cannons",
+      "Size": 2,
+      "Range": 2,
+      "PowerCost": 0,
+      "AmmoCost": 2,
+      "ArmorPenetration": 0,
+      "Damage": "1",
+      "Tags": [ "PD", "Shots 2d6", "Shrapnel" ]
+    },
+    {
+      "Name": "Dual Coilguns",
+      "Size": 2,
+      "Range": 10,
+      "PowerCost": 1,
+      "AmmoCost": 2,
+      "ArmorPenetration": 4,
+      "Damage": "1d3+4",
+      "Tags": [ "PD", "Shots 2", "Accurate 1", "Reload 1" ]
+    },
+    {
+      "Name": "Light Spinal Rail",
+      "Size": 2,
+      "Range": 20,
+      "PowerCost": 1,
+      "AmmoCost": 1,
+      "ArmorPenetration": 10,
+      "Damage": "2d6+3",
+      "Tags": [ "Spinal", "Accurate 1", "Reload 1", "Breach 1" ]
+    },
+    {
+      "Name": "Class C Spinal Beam",
+      "Size": 2,
+      "Range": 6,
+      "PowerCost": 3,
+      "AmmoCost": 0,
+      "ArmorPenetration": 20,
+      "Damage": "2d6+4",
+      "Tags": [ "Spinal", "Shred 2" ]
+    },
+    {
+      "Name": "Light Spinal Cannon",
+      "Size": 2,
+      "Range": 8,
+      "PowerCost": 0,
+      "AmmoCost": 2,
+      "ArmorPenetration": 2,
+      "Damage": "1",
+      "Tags": [ "Spinal", "Shots 3d6", "Reload 1", "Shrapnel" ]
+    },
+    {
+      "Name": "Medium Cannon",
+      "Size": 3,
+      "Range": 10,
+      "PowerCost": 0,
+      "AmmoCost": 1,
+      "ArmorPenetration": 6,
+      "Damage": "2d6+3",
+      "Tags": []
+    },
+    {
+      "Name": "Twinned Cannon",
+      "Size": 3,
+      "Range": 8,
+      "PowerCost": 0,
+      "AmmoCost": 2,
+      "ArmorPenetration": 3,
+      "Damage": "1d6+2",
+      "Tags": [ "Shots 2" ]
+    },
+    {
+      "Name": "Medium Laser",
+      "Size": 3,
+      "Range": 12,
+      "PowerCost": 1,
+      "AmmoCost": 0,
+      "ArmorPenetration": 3,
+      "Damage": "2d3+3",
+      "Tags": [ "Accurate 2" ]
+    },
+    {
+      "Name": "Plasma Cannon",
+      "Size": 3,
+      "Range": 6,
+      "PowerCost": 2,
+      "AmmoCost": 0,
+      "ArmorPenetration": 8,
+      "Damage": "2d3+4",
+      "Tags": [ "Shred 1" ]
+    },
+    {
+      "Name": "Medium Railgun",
+      "Size": 3,
+      "Range": 16,
+      "PowerCost": 1,
+      "AmmoCost": 2,
+      "ArmorPenetration": 8,
+      "Damage": "3d6+2",
+      "Tags": [ "Accurate 1", "Reload 1" ]
+    },
+    {
+      "Name": "Medium Spinal Rail",
+      "Size": 3,
+      "Range": 25,
+      "PowerCost": 2,
+      "AmmoCost": 2,
+      "ArmorPenetration": 20,
+      "Damage": "5d6+4",
+      "Tags": [ "Spinal", "Reload 2", "Breach 1" ]
+    },
+    {
+      "Name": "Class B Spinal Beam",
+      "Size": 3,
+      "Range": 6,
+      "PowerCost": 3,
+      "AmmoCost": 0,
+      "ArmorPenetration": 50,
+      "Damage": "4d6+5",
+      "Tags": [ "Spinal", "Shred 2" ]
+    },
+    {
+      "Name": "Annihilator Cannon",
+      "Size": 4,
+      "Range": 10,
+      "PowerCost": 0,
+      "AmmoCost": 2,
+      "ArmorPenetration": 8,
+      "Damage": "3d6+4",
+      "Tags": [ "Inaccurate 1", "Reload 1" ]
+    }
+  ]
+}

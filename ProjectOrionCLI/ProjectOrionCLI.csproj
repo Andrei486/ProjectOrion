@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject></StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectOrionCompendium\ProjectOrionCompendium.csproj" />
+    <ProjectReference Include="..\ProjectOrionShipSheets\ProjectOrionShipSheets.csproj" />
+  </ItemGroup>
+
+</Project>
