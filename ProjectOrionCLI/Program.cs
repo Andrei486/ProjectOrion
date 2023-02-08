@@ -41,7 +41,7 @@ void ShowShip(Ship ship)
     Console.WriteLine(String.Format("Systems ({0}/{1} slots free):", ship.GetFreeSystemSlots(), ship.SystemSlots));
     foreach (ShipSystem system in ship.Systems)
     {
-        Console.WriteLine(String.Format("{0} | {1}", ++i, GetSystemDescription(system)));
+        if (system.Slots > 0) Console.WriteLine(String.Format("{0} | {1}", ++i, GetSystemDescription(system)));
     }
 }
 
@@ -67,6 +67,8 @@ Ship SelectShip()
         }
     }
     SelectIdentifier(shipTemplate);
+    compendium.EquipDefaultSystems(shipTemplate);
+    compendium.AddDefaultTraits(shipTemplate);
     return shipTemplate;
 }
 
@@ -255,7 +257,7 @@ void RemoveSystem(Ship ship)
     int i = 0;
     foreach (ShipSystem system in ship.Systems)
     {
-        Console.WriteLine(String.Format("{0} | {1}", ++i, GetSystemDescription(system)));
+        if (system.Slots > 0) Console.WriteLine(String.Format("{0} | {1}", ++i, GetSystemDescription(system)));
     }
     while (!success)
     {
@@ -274,8 +276,16 @@ void RemoveSystem(Ship ship)
             ShipSystem system = compendium.GetSystem(input);
             if (system != null)
             {
-                ship.Systems.Remove(system);
-                success = true;
+                if (system.Slots > 0)
+                {
+                    ship.Systems.Remove(system);
+                    success = true;
+                    Console.WriteLine("System removed.");
+                } else
+                {
+                    Console.WriteLine(string.Format("Cannot remove default system {0}. Only systems that cost slots can be removed.", input));
+                }
+                
             }
             else
             {
@@ -303,8 +313,6 @@ void ExportShip(Ship ship)
 
         try
         {
-            compendium.EquipDefaultSystems(ship);
-            compendium.AddDefaultTraits(ship);
             sheetCreator.CreateSheet(input, true);
             success = true;
         }
