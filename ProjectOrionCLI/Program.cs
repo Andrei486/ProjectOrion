@@ -229,17 +229,22 @@ void AddSystem(Ship ship)
             ShipSystem system = compendium.GetSystem(input);
             if (system != null)
             {
-                try
+                if (system.Slots > 0)
                 {
-                    ship.Equip(system);
-                    Console.WriteLine("Equipped system!");
-                    success = true;
-                }
-                catch (ArgumentException e)
+                    try
+                    {
+                        ship.Equip(system);
+                        Console.WriteLine("Equipped system!");
+                        success = true;
+                    }
+                    catch (ArgumentException e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
+                } else
                 {
-                    Console.WriteLine(e.Message);
+                    Console.WriteLine(string.Format("Cannot equip default system {0}. Only systems that cost slots can be equipped.", input));
                 }
-
             }
             else
             {
