@@ -18,8 +18,13 @@ namespace ShipSheets
             Description = description;
             Slots = slots;
             HitPoints = hitPoints;
-            BubbleText = bubbleText ?? (new string[0]);
+            BubbleText = bubbleText;
             EquippableClasses = equippableClasses ?? ((ShipClass[])Enum.GetValues(typeof(ShipClass)));
+        }
+
+        public static ShipSystem Filler()
+        {
+            return new ShipSystem("", "", 1, 0);
         }
     }
 }

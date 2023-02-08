@@ -18,7 +18,7 @@ namespace ShipSheets
         private const double HORIZONTAL_MARGINS = 20;
         private const double VERTICAL_TABLE_PADDING = 4;
         private const double HORIZONTAL_TABLE_PADDING = 4;
-        private const double SECTION_SPACING = 8;
+        private const double SECTION_SPACING = 6;
         private const string DAMAGE_BUBBLE = "[_]";
 
         private struct FontPreset
@@ -64,7 +64,7 @@ namespace ShipSheets
                 new ShipStat[] {ShipStat.Evasion, ShipStat.Armour, ShipStat.Speed, ShipStat.Sensors, ShipStat.Signature}
             };
             var endX = gfx.PageSize.Width - HORIZONTAL_MARGINS;
-            var columnWidth = (endX - x - SECTION_SPACING * (statColumns.Length - 1)) / statColumns.Length;
+            var columnWidth = (endX - x - SECTION_SPACING * 2 * (statColumns.Length - 1)) / statColumns.Length;
             var statBoxHeight = gfx.MeasureString("Test", GetFontPreset("Stat Box").Font).Height * 1.5 + 2 * VERTICAL_TABLE_PADDING;
             var currentX = x;
             var currentY = y;
@@ -80,7 +80,7 @@ namespace ShipSheets
                         stats[j]);
                     currentY = point.Y;
                 }
-                currentX += columnWidth + SECTION_SPACING;
+                currentX += columnWidth + 2 * SECTION_SPACING;
             }
             return new XPoint(x, currentY);
         }
@@ -133,9 +133,59 @@ namespace ShipSheets
             return AddTable(gfx, x, y, Ship.Traits, columns, fontPreset, headerFontPreset, new string[] { "NAME", "DESCRIPTION" }, multilineLast: true);
         }
 
-        private void AddSystems(XGraphics gfx, double x, double y)
+        private XPoint AddSystems(XGraphics gfx, double x, double y)
         {
+            ShipSystem[][] systemColumns = new ShipSystem[][]
+            {
+                (from system in Ship.Systems where system.Slots == 0 select system).ToArray(),
+                (from system in Ship.Systems where system.Slots > 0 select system).Concat(Enumerable.Repeat(ShipSystem.Filler(), Ship.GetFreeSystemSlots())).ToArray()
+            };
+            string[] headers = new string[]
+            {
+                "SYSTEMS - CORE",
+                "SYSTEMS - SLOTS"
+            };
+            var columnMap = new List<Func<ShipSystem, string>>()
+            {
+                system => system.Name,
+                system => system.BubbleText == null ? (system.HitPoints > 0 ? string.Join(" ", Enumerable.Repeat(DAMAGE_BUBBLE, system.HitPoints)) : "") 
+                    : string.Join(" ", from text in system.BubbleText select string.Format("[{0}]", text)),
+                system => system.Description
+            };
+            var endX = gfx.PageSize.Width - HORIZONTAL_MARGINS;
+            var currentX = x;
+            var currentY = y;
+            var maxY = y;
+            var columnWidth = (endX - x - SECTION_SPACING * 2 * (systemColumns.Length - 1)) / systemColumns.Length;
+            XPoint point;
+            double tableStartY = y;
+            for (int i = 0; i < headers.Length; i++)
+            {
+                var header = headers[i];
+                point = AddHeading(gfx, currentX, currentY, header,
+                    GetFontPreset("Heading 2"),
+                    new XStringFormat
+                    {
+                        Alignment = XStringAlignment.Near,
+                        LineAlignment = XLineAlignment.Center
+                    },
+                    endX: currentX + columnWidth
+                );
+                currentX += columnWidth + 2 * SECTION_SPACING;
+                tableStartY = point.Y + SECTION_SPACING;
+            }
 
+            currentX = x;
+            for (int i = 0; i < systemColumns.Length; i++)
+            {
+                currentY = tableStartY;
+                point = AddTable(gfx, currentX, currentY, systemColumns[i], columnMap, GetFontPreset("Mono"), GetFontPreset("Mono Heading 3"),
+                    headers: new string[] {"NAME", "DMG", "DESCRIPTION"}, drawLines: true, multilineLast: true, endX: currentX + columnWidth);
+                currentY = point.Y;
+                currentX += columnWidth + 2 * SECTION_SPACING;
+                maxY = Math.Max(maxY, currentY);
+            }
+            return new XPoint(x, maxY);
         }
 
         private XPoint AddMounts(XGraphics gfx, double x, double y)
@@ -215,15 +265,16 @@ namespace ShipSheets
         /// <param name="drawLines">True if line separators should be drawn between rows, or false if not.</param>
         /// <returns>Maximum length of the table column.</returns>
         private XPoint AddTableColumn(XGraphics gfx, double x, double y, IEnumerable<string> data, FontPreset fontPreset, FontPreset headerFontPreset,
-            bool drawLines = true, double[] heights = null, bool useRemainingWidth = false)
+            bool drawLines = true, double[] heights = null, bool useRemainingWidth = false, double endX=-1)
         {
             var font = fontPreset.Font;
             var headerFont = headerFontPreset.Font;
             var tf = new XTextFormatter(gfx);
+            if (endX == -1) endX = gfx.PageSize.Width - HORIZONTAL_MARGINS;
             double maxLength;
             if (useRemainingWidth)
             {
-                maxLength = gfx.PageSize.Width - HORIZONTAL_MARGINS - x;
+                maxLength = endX - x;
             }
             else
             {
@@ -274,16 +325,17 @@ namespace ShipSheets
         }
 
         private XPoint AddTable<T>(XGraphics gfx, double x, double y, IEnumerable<T> objects, IEnumerable<Func<T, string>> columns,
-            FontPreset fontPreset, FontPreset headerFontPreset, string[] headers = null, bool drawLines = true, bool multilineLast = false)
+            FontPreset fontPreset, FontPreset headerFontPreset, string[] headers = null, bool drawLines = true, bool multilineLast = false, double endX=-1)
         {
             if (headers != null && headers.Length != columns.Count())
             {
                 throw new ArgumentException("Length of headers must be the same as length of columns for a table!");
             }
+            if (endX == -1) endX = gfx.PageSize.Width - HORIZONTAL_MARGINS;
             var currentX = x;
             XPoint bottomRight = new XPoint();
             int i = 0;
-            var remainingWidth = gfx.PageSize.Width - HORIZONTAL_MARGINS - x;
+            var remainingWidth = endX - x;
             string header = null;
             double[] rowHeights = null;
 
@@ -297,12 +349,17 @@ namespace ShipSheets
                         header = headers[i++];
                         data = data.Prepend(header);
                     }
-                    if (i < headers.Length)
+                    if (i < columns.Count())
                     {
                         remainingWidth -= GetColumnWidth(gfx, data, fontPreset, headerFontPreset);
                     }
                 }
-                rowHeights = GetColumnHeights(gfx, (from obj in objects select columns.Last()(obj)).Prepend(headers[headers.Length - 1]), fontPreset, remainingWidth);
+                var columnData = (from obj in objects select columns.Last()(obj));
+                if (headers != null)
+                {
+                    columnData = columnData.Prepend(headers[headers.Length - 1]);
+                }
+                rowHeights = GetColumnHeights(gfx, columnData, fontPreset, remainingWidth);
             }
 
             i = 0;
@@ -313,7 +370,7 @@ namespace ShipSheets
 
                 if (multilineLast)
                 {
-                    bottomRight = AddTableColumn(gfx, currentX, y, data, fontPreset, headerFontPreset, drawLines, rowHeights, useRemainingWidth: i == headers.Length);
+                    bottomRight = AddTableColumn(gfx, currentX, y, data, fontPreset, headerFontPreset, drawLines, rowHeights, useRemainingWidth: i == columns.Count(), endX: endX);
                 }
                 else
                 {
@@ -354,7 +411,6 @@ namespace ShipSheets
         private XPoint AddHeading(XGraphics gfx, double x, double y, string text, FontPreset preset, XStringFormat format, double endX = -1)
         {
             var rect = new XRect(x, y, endX > 0 ? endX : gfx.PageSize.Width - HORIZONTAL_MARGINS, gfx.MeasureString(text, preset.Font, format).Height);
-            rect.Inflate(0, VERTICAL_TABLE_PADDING);
             gfx.DrawString(text, preset.Font, preset.Brush, rect, format);
             return new XPoint(x + rect.Width, y + rect.Height);
         }
@@ -397,6 +453,9 @@ namespace ShipSheets
             );
             currentY = point.Y + SECTION_SPACING;
             point = AddTraits(gfx, currentX, currentY);
+            currentY = point.Y + SECTION_SPACING;
+
+            point = AddSystems(gfx, currentX, currentY);
             currentY = point.Y + SECTION_SPACING;
 
             //draw mount table heading & table
