@@ -37,12 +37,12 @@ namespace ShipSheets
 
         private static Dictionary<string, FontPreset> fontPresets = new Dictionary<string, FontPreset>()
         {
-            { "Heading 2", new FontPreset(new XFont("Arial", 16, XFontStyle.Bold), XBrushes.Navy) },
-            { "Heading 3", new FontPreset(new XFont("Arial", 12, XFontStyle.Bold), XBrushes.Navy) },
-            { "Mono Heading 3", new FontPreset(new XFont("Consolas", 12, XFontStyle.Bold)) },
-            { "Paragraph", new FontPreset(new XFont("Arial", 10)) },
-            { "Mono", new FontPreset(new XFont("Consolas", 9)) },
-            { "Stat Box", new FontPreset(new XFont("Consolas", 12)) }
+            { "Heading 2", new FontPreset(new XFont("Arial", 14, XFontStyle.Bold), XBrushes.Navy) },
+            { "Heading 3", new FontPreset(new XFont("Arial", 11, XFontStyle.Bold), XBrushes.Navy) },
+            { "Mono Heading 3", new FontPreset(new XFont("Consolas", 11, XFontStyle.Bold)) },
+            { "Paragraph", new FontPreset(new XFont("Arial", 9)) },
+            { "Mono", new FontPreset(new XFont("Consolas", 8)) },
+            { "Stat Box", new FontPreset(new XFont("Consolas", 11)) }
         };
 
         public ShipSheetCreator(Ship ship)
