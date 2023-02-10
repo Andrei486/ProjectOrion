@@ -8,40 +8,40 @@ Compendium.Compendium compendium = Compendium.Compendium.GetCompendium();
 
 string GetMountDescription(Mount mount)
 {
-    return String.Format("Mount S{0}C{1} ({2} {3}): {4}", mount.Size, mount.Count, mount.MainArc, mount.Type, (mount.Weapon != null) ? mount.Weapon.Name : "Empty");
+    return string.Format("Mount S{0}C{1} ({2}): {3}", mount.Size, mount.Count, (mount.IsSpinal) ? "Spinal" : string.Format("{0} {1}", mount.MainArc, mount.Type), (mount.Weapon != null) ? mount.Weapon.Name : "Empty");
 }
 
 string GetBayDescription(Bay bay)
 {
-    return String.Format("Bay S{0}C{1} ({2}): {3}", bay.Size, bay.Count, String.Join("", (from arc in bay.Arcs select arc.GetDisplayString())), (bay.Craft != null) ? bay.Craft.Name : "Empty");
+    return string.Format("Bay S{0}C{1} ({2}): {3}", bay.Size, bay.Count, String.Join("", (from arc in bay.Arcs select arc.GetDisplayString())), (bay.Craft != null) ? bay.Craft.Name : "Empty");
 }
 
 string GetSystemDescription(ShipSystem system)
 {
-    return String.Format("{0} ({1} slots)", system.Name, system.Slots);
+    return string.Format("{0} ({1} slots)", system.Name, system.Slots);
 }
 
 void ShowShip(Ship ship)
 {
     Console.WriteLine();
-    Console.WriteLine(String.Format("{0}: {1}", (ship.Identifier == "" || ship.Identifier == null) ? "<No Identifier>": ship.Identifier, ship.Name));
+    Console.WriteLine(string.Format("{0}: {1}", (ship.Identifier == "" || ship.Identifier == null) ? "<No Identifier>": ship.Identifier, ship.Name));
     Console.WriteLine("Mounts:");
     int i = 0;
     foreach (Mount mount in ship.Mounts)
     {
-        Console.WriteLine(String.Format("{0} | {1}", ++i, GetMountDescription(mount)));
+        Console.WriteLine(string.Format("{0} | {1}", ++i, GetMountDescription(mount)));
     }
     i = 0;
     Console.WriteLine("Bays:");
     foreach (Bay bay in ship.Bays)
     {
-        Console.WriteLine(String.Format("{0} | {1}", ++i, GetBayDescription(bay)));
+        Console.WriteLine(string.Format("{0} | {1}", ++i, GetBayDescription(bay)));
     }
     i = 0;
-    Console.WriteLine(String.Format("Systems ({0}/{1} slots free):", ship.GetFreeSystemSlots(), ship.SystemSlots));
+    Console.WriteLine(string.Format("Systems ({0}/{1} slots free):", ship.GetFreeSystemSlots(), ship.SystemSlots));
     foreach (ShipSystem system in ship.Systems)
     {
-        if (system.Slots > 0) Console.WriteLine(String.Format("{0} | {1}", ++i, GetSystemDescription(system)));
+        if (system.Slots > 0) Console.WriteLine(string.Format("{0} | {1}", ++i, GetSystemDescription(system)));
     }
 }
 
@@ -63,7 +63,7 @@ Ship SelectShip()
         shipTemplate = compendium.GetShip(input);
         if (shipTemplate == null)
         {
-            Console.WriteLine(String.Format("{0} does not match any ship template. Enter another name.", input));
+            Console.WriteLine(string.Format("{0} does not match any ship template. Enter another name.", input));
         }
     }
     SelectIdentifier(shipTemplate);
@@ -90,14 +90,14 @@ void EquipMount(Ship ship, int number)
 {
     if (number < 1 || number > ship.Mounts.Length)
     {
-        Console.WriteLine(String.Format("The ship has no mount with number {0}.", number));
+        Console.WriteLine(string.Format("The ship has no mount with number {0}.", number));
         return;
     }
     var mount = ship.Mounts[number-1];
     var success = false;
     string input;
     Console.WriteLine("\nEnter the name of the weapon to equip (ex: Light Spinal Rail), nothing to make no changes, or '-' to remove the weapon.");
-    Console.WriteLine(String.Format("{0} | {1}", number, GetMountDescription(mount)));
+    Console.WriteLine(string.Format("{0} | {1}", number, GetMountDescription(mount)));
     while (!success)
     {
         Console.Write(PROMPT);
@@ -148,14 +148,14 @@ void EquipBay(Ship ship, int number)
 {
     if (number < 1 || number > ship.Bays.Length)
     {
-        Console.WriteLine(String.Format("The ship has no bay with number {0}.", number));
+        Console.WriteLine(string.Format("The ship has no bay with number {0}.", number));
         return;
     }
     var bay = ship.Bays[number - 1];
     var success = false;
     string input;
     Console.WriteLine("\nEnter the name of the craft to equip (ex: Light Missile), nothing to make no changes, or '-' to remove the craft.");
-    Console.WriteLine(String.Format("{0} | {1}", number, GetBayDescription(bay)));
+    Console.WriteLine(string.Format("{0} | {1}", number, GetBayDescription(bay)));
     while (!success)
     {
         Console.Write(PROMPT);
@@ -262,7 +262,7 @@ void RemoveSystem(Ship ship)
     int i = 0;
     foreach (ShipSystem system in ship.Systems)
     {
-        if (system.Slots > 0) Console.WriteLine(String.Format("{0} | {1}", ++i, GetSystemDescription(system)));
+        if (system.Slots > 0) Console.WriteLine(string.Format("{0} | {1}", ++i, GetSystemDescription(system)));
     }
     while (!success)
     {

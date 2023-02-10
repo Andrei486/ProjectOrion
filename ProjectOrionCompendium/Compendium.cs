@@ -171,7 +171,6 @@ namespace Compendium
             Dictionary<string, string> toAdd = defaultTraits[ship.Class];
             foreach (KeyValuePair<string, string> pair in toAdd)
             {
-                Console.WriteLine(pair.Key, pair.Value);
                 if (!ship.Traits.ContainsKey(pair.Key))
                 {
                     ship.Traits.Add(pair.Key, pair.Value);

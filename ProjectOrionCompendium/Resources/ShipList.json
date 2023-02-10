@@ -657,6 +657,305 @@
           "Craft": null
         }
       ]
+    },
+    {
+      "Name": "Oasis-Class Frigate",
+      "Class": "ESCORT",
+      "Stats": {
+        "HP": 18,
+        "Shields": 12,
+        "Armour": 1,
+        "Evasion": 9,
+        "Speed": 8,
+        "Reactor": 8,
+        "Sensors": 10,
+        "Signature": 4,
+        "Ammo": 16,
+        "Restores": 3
+      },
+      "SystemSlots": 4,
+      "PointCost": 2,
+      "Traits": {
+        "Emitter Amplification": "Whenever this Ship applies Lock or Jam with an EWAR weapon, it may spend 1 Power to increase the amount applied by 2.",
+        "Counter Intelligence": "Whenever a hostile Ship applies Lock to this Ship or an adjacent allied Ship, apply an equal amount of Lock to the hostile Ship.",
+        "Halcyon Respite": "This ship and adjacent allied ships clear all Jam during the Upkeep Phase."
+      },
+      "Mounts": [
+        {
+          "Size": 2,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "PORT",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "STARBOARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Type": "OMNI",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "OMNI",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        }
+      ],
+      "Bays": [
+        {
+          "Size": 2,
+          "Count": 3,
+          "Arcs": [ "REAR" ],
+          "Craft": null
+        },
+        {
+          "Size": 2,
+          "Count": 3,
+          "Arcs": [ "REAR" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Arcs": [ "FORWARD" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Arcs": [ "FORWARD" ],
+          "Craft": null
+        }
+      ]
+    },
+    {
+      "Name": "Dauntless-Class Destroyer",
+      "Class": "LINE",
+      "Stats": {
+        "HP": 32,
+        "Shields": 18,
+        "Armour": 3,
+        "Evasion": 8,
+        "Speed": 7,
+        "Reactor": 10,
+        "Sensors": 6,
+        "Signature": 7,
+        "Ammo": 24,
+        "Restores": 4
+      },
+      "SystemSlots": 3,
+      "PointCost": 3,
+      "Traits": {
+        "Hammerblow": "If this Ship makes an Attack against a target it has already Attacked in this turn, the Attack ignores Armour.",
+        "Aggressive Profile": "Attacks made by this Ship gain +1 Accuracy against targets in its Frontal Arc within Range 5."
+      },
+      "Mounts": [
+        {
+          "Size": 2,
+          "Count": 2,
+          "Type": "FIXED",
+          "MainArc": "FORWARD",
+          "IsSpinal": true,
+          "Weapon": null
+        },
+        {
+          "Size": 3,
+          "Count": 2,
+          "Type": "OMNI",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 3,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "PORT",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "STARBOARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "OMNI",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        }
+      ],
+      "Bays": [
+        {
+          "Size": 2,
+          "Count": 2,
+          "Arcs": [ "PORT" ],
+          "Craft": null
+        },
+        {
+          "Size": 2,
+          "Count": 2,
+          "Arcs": [ "STARBOARD" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Arcs": [ "PORT", "STARBOARD", "REAR" ],
+          "Craft": null
+        }
+      ]
+    },
+    {
+      "Name": "Harpy-Class Destroyer",
+      "Class": "LINE",
+      "Stats": {
+        "HP": 32,
+        "Shields": 12,
+        "Armour": 3,
+        "Evasion": 8,
+        "Speed": 7,
+        "Reactor": 6,
+        "Sensors": 8,
+        "Signature": 7,
+        "Ammo": 24,
+        "Restores": 4
+      },
+      "SystemSlots": 3,
+      "PointCost": 3,
+      "Traits": {
+        "HL-M Tubes": "All Missiles carried by this ship gain Launch equal to their Speed",
+        "Cruise Guidance": "This ship does not need Line of Sight to establish Comms with Payloads within Range 6."
+      },
+      "Mounts": [
+        {
+          "Size": 2,
+          "Count": 2,
+          "Type": "OMNI",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "PORT",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "STARBOARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "OMNI",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        }
+      ],
+      "Bays": [
+        {
+          "Size": 3,
+          "Count": 2,
+          "Arcs": [ "REAR" ],
+          "Craft": null
+        },
+        {
+          "Size": 2,
+          "Count": 4,
+          "Arcs": [ "FORWARD", "PORT", "STARBOARD" ],
+          "Craft": null
+        },
+        {
+          "Size": 2,
+          "Count": 4,
+          "Arcs": [ "FORWARD", "PORT", "STARBOARD" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Arcs": [ "FORWARD", "PORT", "STARBOARD" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Arcs": [ "FORWARD", "PORT", "STARBOARD" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 3,
+          "Arcs": [ "PORT" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 3,
+          "Arcs": [ "STARBOARD" ],
+          "Craft": null
+        }
+      ]
     }
   ]
 }
