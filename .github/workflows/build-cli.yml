@@ -70,15 +70,15 @@ jobs:
       
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
-      run: msbuild $env:Project_Path /t:Restore /p:Configuration=$env:Configuration /p:Platform=$env:Platform /p:OutputPath=.\$env:CLIRelease
+      run: msbuild $env:Project_Path /t:Restore /p:Configuration=$env:Configuration /p:Platform=$env:Platform /p:OutputPath=./$env:Build_Directory
 
     # Build the CLI project
     - name: Build the CLI project
-      run: msbuild $env:Project_Path /p:Configuration=$env:Configuration /p:Platform=$env:Platform /p:OutputPath=$env:Build_Directory
+      run: msbuild $env:Project_Path /p:Configuration=$env:Configuration /p:Platform=$env:Platform /p:OutputPath=./$env:Build_Directory
 
     # Upload the MSIX package: https://github.com/marketplace/actions/upload-a-build-artifact
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: project-orion-cli
-        path: .\${{ env.Build_Directory }}/
+        path: ./${{ env.Build_Directory }}/
