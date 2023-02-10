@@ -70,7 +70,7 @@ jobs:
       
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
-      run: msbuild $env:Project_Path /t:Restore /p:Configuration=$env:Configuration /p:Platform=$env:Platform /p:OutputPath=$env:CLIRelease
+      run: msbuild $env:Project_Path /t:Restore /p:Configuration=$env:Configuration /p:Platform=$env:Platform /p:OutputPath=.\$env:CLIRelease
 
     # Build the CLI project
     - name: Build the CLI project
@@ -81,4 +81,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: project-orion-cli
-        path: ${{ env.Build_Directory }}
+        path: .\${{ env.Build_Directory }}/
