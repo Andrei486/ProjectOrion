@@ -3,12 +3,45 @@ name: Project Orion CLI Build
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
 
+  release:
+    runs-on: windows-latest
+    name: "Release CLI"
+    needs: build
+    
+    steps:
+      - name: Download built CLI
+        uses: actions/download-artifact@v2
+        with:
+          name: project-orion-cli
+      - name: View content for debugging
+        run: ls -R
+      - name: Create new GitHub release
+        id: create-new-release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.run_number }}
+          release_name: CI Release ${{ github.run_number }}
+      - name: Zip CLI
+        uses: thedoctor0/zip-release@master
+        with:
+          filename: project_orion_cli.zip
+      - name: Upload CLI to release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create-new-release.outputs.upload_url }}
+          asset_path: ./project_orion_cli.zip
+          asset_name: project-orion-cli-v${{ github.run_number }}.zip
+          asset_content_type: application/zip
+
   build:
+    name: "Build CLI"
     strategy:
       matrix:
         configuration: [Debug, Release]
@@ -53,5 +86,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
-        name: Project Orion CLI
+        name: project-orion-cli
         path: ${{ env.Build_Directory }}
