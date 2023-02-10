@@ -1,0 +1,52 @@
+name: Project Orion CLI Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+    strategy:
+      matrix:
+        configuration: [Debug, Release]
+        platform: ["Any CPU"]
+
+    runs-on: windows-latest  # For a list of available runner types, refer to
+                             # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+
+    env:
+      Project_Path: ProjectOrionCLI\ProjectOrionCLI.csproj
+      Build_Directory: CLIRelease
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    # Install the .NET Core workload
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+
+    # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
+    - name: Setup MSBuild.exe
+      uses: microsoft/setup-msbuild@v1.0.2
+    
+    # Build the CLI project
+    - name: Build the CLI project
+      run: msbuild $env:Project_Path /p:Configuration=$env:Configuration /p:Platform=$env:Platform /p:OutputPath=$env:CLIRelease
+      env:
+        Configuration: ${{ matrix.configuration }}
+        Platform: ${{ matrix.platform }}
+
+    # Upload the MSIX package: https://github.com/marketplace/actions/upload-a-build-artifact
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: Project Orion CLI
+        path: ${{ env.CLIRelease }}
