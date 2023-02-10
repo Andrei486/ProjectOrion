@@ -42,10 +42,6 @@ jobs:
 
   build:
     name: "Build CLI"
-    strategy:
-      matrix:
-        configuration: [Debug, Release]
-        platform: ["Any CPU"]
 
     runs-on: windows-latest  # For a list of available runner types, refer to
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
@@ -53,6 +49,8 @@ jobs:
     env:
       Project_Path: ProjectOrionCLI\ProjectOrionCLI.csproj
       Build_Directory: CLIRelease
+      Configuration: Release
+      Platform: Any CPU
     
     steps:
     - name: Checkout
@@ -73,14 +71,10 @@ jobs:
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
       run: msbuild $env:Project_Path /t:Restore /p:Configuration=$env:Configuration /p:Platform=$env:Platform /p:OutputPath=$env:CLIRelease
-      env:
-        Configuration: ${{ matrix.configuration }}
+
     # Build the CLI project
     - name: Build the CLI project
       run: msbuild $env:Project_Path /p:Configuration=$env:Configuration /p:Platform=$env:Platform /p:OutputPath=$env:Build_Directory
-      env:
-        Configuration: ${{ matrix.configuration }}
-        Platform: ${{ matrix.platform }}
 
     # Upload the MSIX package: https://github.com/marketplace/actions/upload-a-build-artifact
     - name: Upload artifact
