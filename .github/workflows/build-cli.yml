@@ -44,7 +44,7 @@ jobs:
         Configuration: ${{ matrix.configuration }}
     # Build the CLI project
     - name: Build the CLI project
-      run: msbuild $env:Project_Path /p:Configuration=$env:Configuration /p:Platform=$env:Platform /p:OutputPath=$env:CLIRelease
+      run: msbuild $env:Project_Path /p:Configuration=$env:Configuration /p:Platform=$env:Platform /p:OutputPath=$env:Build_Directory
       env:
         Configuration: ${{ matrix.configuration }}
         Platform: ${{ matrix.platform }}
@@ -54,4 +54,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: Project Orion CLI
-        path: ${{ env.CLIRelease }}
+        path: ${{ env.Build_Directory }}
