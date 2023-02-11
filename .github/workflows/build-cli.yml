@@ -3,6 +3,7 @@ name: Project Orion CLI Build
 on:
   push:
     branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
 
