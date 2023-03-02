@@ -850,6 +850,300 @@
       ]
     },
     {
+      "Name": "Catfish-Class Heavy Frigate",
+      "Class": "ESCORT",
+      "Stats": {
+        "HP": 28,
+        "Shields": 6,
+        "Armour": 3,
+        "Evasion": 7,
+        "Speed": 5,
+        "Reactor": 6,
+        "Sensors": 6,
+        "Signature": 6,
+        "Ammo": 16,
+        "Restores": 3
+      },
+      "SystemSlots": 3,
+      "PointCost": 2,
+      "Traits": {
+        "HPM Thrusters": "When this Ship uses Lateral Thrust, it may move one additional space.",
+        "Vindicator FCS": "Whenever an allied ship in visual range is targeted by a weapon attack, this ship may fire one of its mounts at the attacking unit as reaction, provided it has range, line of sight and vision."
+      },
+      "Mounts": [
+        {
+          "Size": 3,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "PORT",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "STARBOARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "OMNI",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        }
+      ],
+      "Bays": [
+        {
+          "Size": 2,
+          "Count": 2,
+          "Arcs": [ "FORWARD", "PORT", "STARBOARD" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Arcs": [ "FORWARD", "PORT", "STARBOARD" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Arcs": [ "REAR" ],
+          "Craft": null
+        }
+      ]
+    },
+    {
+      "Name": "Comet-Class Cruiser",
+      "Class": "LINE",
+      "Stats": {
+        "HP": 60,
+        "Shields": 6,
+        "Armour": 4,
+        "Evasion": 6,
+        "Speed": 7,
+        "Reactor": 8,
+        "Sensors": 5,
+        "Signature": 7,
+        "Ammo": 24,
+        "Restores": 4
+      },
+      "SystemSlots": 3,
+      "PointCost": 4,
+      "Traits": {
+        "Reverse Thruster Bank": "When this Ship treats the direction opposite its Heading as the direction of its Heading for the purposes of Movement.",
+        "Ammo Efficiency": "When this Ship fires a Mount, reduce the Ammo cost by 2, to a minimum of 1."
+      },
+      "Mounts": [
+        {
+          "Size": 3,
+          "Count": 4,
+          "Type": "FIXED",
+          "MainArc": "PORT",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 3,
+          "Count": 4,
+          "Type": "FIXED",
+          "MainArc": "STARBOARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 3,
+          "Count": 4,
+          "Type": "FIXED",
+          "MainArc": "PORT",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 3,
+          "Count": 4,
+          "Type": "FIXED",
+          "MainArc": "STARBOARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "PORT",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "STARBOARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        }
+      ],
+      "Bays": [
+        {
+          "Size": 2,
+          "Count": 2,
+          "Arcs": [ "PORT", "STARBOARD", "REAR" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Arcs": [ "FORWARD" ],
+          "Craft": null
+        }
+      ]
+    },
+    {
+      "Name": "Orion-Class Battleship",
+      "Class": "CAPITAL",
+      "Stats": {
+        "HP": 60,
+        "Shields": 24,
+        "Armour": 5,
+        "Evasion": 5,
+        "Speed": 3,
+        "Reactor": 10,
+        "Sensors": 8,
+        "Signature": 10,
+        "Ammo": 32,
+        "Restores": 6
+      },
+      "SystemSlots": 3,
+      "PointCost": 8,
+      "Traits": {
+        "HPM Thrusters": "When this Ship uses Lateral Thrust, it may move one additional space.",
+        "Sloped Armour": "This Ship's Armour is treated as double for Attacks originating from Units in its Forward Arc."
+      },
+      "Mounts": [
+        {
+          "Size": 4,
+          "Count": 2,
+          "Type": "FIXED",
+          "MainArc": "FORWARD",
+          "IsSpinal": true,
+          "Weapon": null
+        },
+        {
+          "Size": 4,
+          "Count": 2,
+          "Type": "FIXED",
+          "MainArc": "FORWARD",
+          "IsSpinal": true,
+          "Weapon": null
+        },
+        {
+          "Size": 3,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "PORT",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 3,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "STARBOARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "OMNI",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        }
+      ],
+      "Bays": [
+        {
+          "Size": 2,
+          "Count": 4,
+          "Arcs": [ "FORWARD" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Arcs": [ "PORT" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Arcs": [ "STARBOARD" ],
+          "Craft": null
+        }
+      ]
+    },
+    {
       "Name": "Harpy-Class Destroyer",
       "Class": "LINE",
       "Stats": {
