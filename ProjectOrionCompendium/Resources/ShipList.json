@@ -132,7 +132,7 @@
       "SystemSlots": 2,
       "PointCost": 1,
       "Traits": {
-        "Nimble": "This ship may make an additional heading adjustment during the Movement Phase."
+        "Nimble": "This ship may make an additional heading adjustment during the Movement Phase.",
         "Ranging Fire": "After this ship uses Open Fire, it also may apply 1 Lock to the target unit."
       },
       "Mounts": [
@@ -200,7 +200,7 @@
       "SystemSlots": 2,
       "PointCost": 1,
       "Traits": {
-        "HL-T Tubes": "All Torpedoes carried by this ship gain Launch 3."
+        "HL-T Tubes": "All Torpedoes carried by this ship gain Launch 3.",
         "HP-M Thrusters": "When this Ship uses Lateral Thrust, it may move one additional space."
       },
       "Mounts": [
@@ -262,8 +262,8 @@
       "SystemSlots": 2,
       "PointCost": 1,
       "Traits": {
-        "BI-M Thrusters": "When this Ship uses Lateral Thrust, it may make one additional heading adjustment."
-        "Gladiator FCS": "Attacks made by this Ship gain +1 Accuracy against targets in its Visual Range.
+        "BI-M Thrusters": "When this Ship uses Lateral Thrust, it may make one additional heading adjustment.",
+        "Gladiator FCS": "Attacks made by this Ship gain +1 Accuracy against targets in its Visual Range."
       },
       "Mounts": [
         {
@@ -589,7 +589,7 @@
       "SystemSlots": 3,
       "PointCost": 4,
       "Traits": {
-        "Direct Reactor Hookup": "When this Ship fires a Mount, reduce the Power cost by 2, to a minimum of 1."
+        "Direct Reactor Hookup": "When this Ship fires a Mount, reduce the Power cost by 2, to a minimum of 1.",
 		"BI-M Thrusters": "When this Ship uses Lateral Thrust, it may make one additional heading adjustment."
       },
       "Mounts": [
