@@ -171,9 +171,19 @@
       "Tags": [ "Spinal", "Shred 2" ]
     },
     {
-      "Name": "Light Spinal Cannon",
+      "Name": "Spinal Cannon",
       "Size": 2,
       "Range": 8,
+      "PowerCost": 0,
+      "AmmoCost": 2,
+      "ArmorPenetration": 8,
+      "Damage": "3d6+4",
+      "Tags": [ "Spinal", "Inaccurate 1", "Reload 1" ]
+    },
+    {
+      "Name": "Spinal Scrap Cannon",
+      "Size": 2,
+      "Range": 4,
       "PowerCost": 0,
       "AmmoCost": 2,
       "ArmorPenetration": 2,
@@ -251,6 +261,16 @@
       "Tags": [ "Spinal", "Shred 2" ]
     },
     {
+      "Name": "Automatic Spinal Cannon",
+      "Size": 3,
+      "Range": 8,
+      "PowerCost": 0,
+      "AmmoCost": 4,
+      "ArmorPenetration": 8,
+      "Damage": "3d6+4",
+      "Tags": [ "Spinal", "Inaccurate 1", "Shots 1d3" ]
+    },
+    {
       "Name": "Annihilator Cannon",
       "Size": 4,
       "Range": 10,
@@ -259,6 +279,76 @@
       "ArmorPenetration": 8,
       "Damage": "3d6+4",
       "Tags": [ "Inaccurate 1", "Reload 1" ]
+    },
+    {
+      "Name": "Devastator Cannon",
+      "Size": 4,
+      "Range": 8,
+      "PowerCost": 0,
+      "AmmoCost": 2,
+      "ArmorPenetration": 6,
+      "Damage": "3d6+4",
+      "Tags": [ "Inaccurate 2" ]
+    },
+    {
+      "Name": "Heavy Laser",
+      "Size": 4,
+      "Range": 12,
+      "PowerCost": 2,
+      "AmmoCost": 0,
+      "ArmorPenetration": 5,
+      "Damage": "3d3+4",
+      "Tags": [ "Accurate 2" ]
+    },
+    {
+      "Name": "Plasma Lance",
+      "Size": 4,
+      "Range": 8,
+      "PowerCost": 3,
+      "AmmoCost": 0,
+      "ArmorPenetration": 12,
+      "Damage": "2d6+4",
+      "Tags": [ "Shred 1" ]
+    },
+    {
+      "Name": "Heavy Railgun",
+      "Size": 4,
+      "Range": 16,
+      "PowerCost": 1,
+      "AmmoCost": 2,
+      "ArmorPenetration": 10,
+      "Damage": "4d6+6",
+      "Tags": [ "Accurate 1", "Reload 1" ]
+    },
+    {
+      "Name": "Heavy Spinal Rail",
+      "Size": 4,
+      "Range": 30,
+      "PowerCost": 2,
+      "AmmoCost": 3,
+      "ArmorPenetration": 20,
+      "Damage": "8d6+6",
+      "Tags": [ "Spinal", "Reload 1", "Breach 1" ]
+    },
+    {
+      "Name": "Class A Spinal Beam",
+      "Size": 4,
+      "Range": 6,
+      "PowerCost": 5,
+      "AmmoCost": 0,
+      "ArmorPenetration": 99,
+      "Damage": "7d6+8",
+      "Tags": [ "Spinal", "Shred 3" ]
+    },
+    {
+      "Name": "Rotary Spinal Cannon",
+      "Size": 2,
+      "Range": 8,
+      "PowerCost": 0,
+      "AmmoCost": 6,
+      "ArmorPenetration": 8,
+      "Damage": "3d6+4",
+      "Tags": [ "Spinal", "Inaccurate 1", "Shots 2d3" ]
     }
   ]
 }
