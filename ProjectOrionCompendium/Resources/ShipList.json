@@ -133,6 +133,7 @@
       "PointCost": 1,
       "Traits": {
         "Nimble": "This ship may make an additional heading adjustment during the Movement Phase."
+        "Ranging Fire": "After this ship uses Open Fire, it also may apply 1 Lock to the target unit."
       },
       "Mounts": [
         {
@@ -182,7 +183,138 @@
       ]
     },
     {
-
+      "Name": "Hammer-Class Corvette",
+      "Class": "ESCORT",
+      "Stats": {
+        "HP": 12,
+        "Shields": 4,
+        "Armour": 1,
+        "Evasion": 11,
+        "Speed": 7,
+        "Reactor": 3,
+        "Sensors": 6,
+        "Signature": 2,
+        "Ammo": 16,
+        "Restores": 3
+      },
+      "SystemSlots": 2,
+      "PointCost": 1,
+      "Traits": {
+        "HL-T Tubes": "All Torpedoes carried by this ship gain Launch 3."
+        "HP-M Thrusters": "When this Ship uses Lateral Thrust, it may move one additional space."
+      },
+      "Mounts": [
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "OMNI",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "PORT",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "STARBOARD",
+          "IsSpinal": false,
+          "Weapon": null
+        }
+      ],
+      "Bays": [
+        {
+          "Size": 2,
+          "Count": 2,
+          "Arcs": [ "FORWARD" ],
+          "Craft": null
+        },
+        {
+          "Size": 2,
+          "Count": 2,
+          "Arcs": [ "FORWARD" ],
+          "Craft": null
+        }
+      ]
+    },
+    {
+      "Name": "Boxer-Class Corvette",
+      "Class": "ESCORT",
+      "Stats": {
+        "HP": 12,
+        "Shields": 4,
+        "Armour": 1,
+        "Evasion": 11,
+        "Speed": 7,
+        "Reactor": 3,
+        "Sensors": 6,
+        "Signature": 2,
+        "Ammo": 16,
+        "Restores": 3
+      },
+      "SystemSlots": 2,
+      "PointCost": 1,
+      "Traits": {
+        "BI-M Thrusters": "When this Ship uses Lateral Thrust, it may make one additional heading adjustment."
+        "Gladiator FCS": "Attacks made by this Ship gain +1 Accuracy against targets in its Visual Range.
+      },
+      "Mounts": [
+        {
+          "Size": 2,
+          "Count": 3,
+          "Type": "FIXED",
+          "MainArc": "PORT",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 3,
+          "Type": "FIXED",
+          "MainArc": "STARBOARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Type": "TURRET",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        }
+      ],
+      "Bays": [
+        {
+          "Size": 1,
+          "Count": 1,
+          "Arcs": [ "PORT" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Arcs": [ "STARBOARD" ],
+          "Craft": null
+        }
+      ]
+    },
+    {
       "Name": "Narwhal-Class Monitor",
       "Class": "ESCORT",
       "Stats": {
@@ -458,6 +590,7 @@
       "PointCost": 4,
       "Traits": {
         "Direct Reactor Hookup": "When this Ship fires a Mount, reduce the Power cost by 2, to a minimum of 1."
+		"BI-M Thrusters": "When this Ship uses Lateral Thrust, it may make one additional heading adjustment."
       },
       "Mounts": [
         {
@@ -867,7 +1000,7 @@
       "SystemSlots": 3,
       "PointCost": 2,
       "Traits": {
-        "HPM Thrusters": "When this Ship uses Lateral Thrust, it may move one additional space.",
+        "HP-M Thrusters": "When this Ship uses Lateral Thrust, it may move one additional space.",
         "Vindicator FCS": "Whenever an allied ship in visual range is targeted by a weapon attack, this ship may fire one of its mounts at the attacking unit as reaction, provided it has range, line of sight and vision."
       },
       "Mounts": [
@@ -1061,7 +1194,7 @@
       "SystemSlots": 3,
       "PointCost": 8,
       "Traits": {
-        "HPM Thrusters": "When this Ship uses Lateral Thrust, it may move one additional space.",
+        "HP-M Thrusters": "When this Ship uses Lateral Thrust, it may move one additional space.",
         "Sloped Armour": "This Ship's Armour is treated as double for Attacks originating from Units in its Forward Arc."
       },
       "Mounts": [
@@ -1139,6 +1272,106 @@
           "Size": 1,
           "Count": 2,
           "Arcs": [ "STARBOARD" ],
+          "Craft": null
+        }
+      ]
+    },
+    {
+      "Name": "Hades-Class Battleship",
+      "Class": "CAPITAL",
+      "Stats": {
+        "HP": 72,
+        "Shields": 24,
+        "Armour": 8,
+        "Evasion": 4,
+        "Speed": 4,
+        "Reactor": 10,
+        "Sensors": 6,
+        "Signature": 12,
+        "Ammo": 32,
+        "Restores": 6
+      },
+      "SystemSlots": 3,
+      "PointCost": 8,
+      "Traits": {
+        "Battery Control": "When this ship uses Open Fire, it may Fire an additional Mount. Both attacks must target the same unit.",
+        "Ranging Fire": "After this ship uses Open Fire, it also may apply 1 Lock to the target unit. "
+      },
+      "Mounts": [
+        {
+          "Size": 4,
+          "Count": 3,
+          "Type": "TURRET",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+		{
+          "Size": 4,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+		{
+          "Size": 4,
+          "Count": 3,
+          "Type": "TURRET",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+		{
+          "Size": 4,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "REAR",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 2,
+          "Type": "FIXED",
+          "MainArc": "PORT",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 2,
+          "Count": 2,
+          "Type": "FIXED",
+          "MainArc": "STARBOARD",
+          "IsSpinal": false,
+          "Weapon": null
+        },
+        {
+          "Size": 1,
+          "Count": 2,
+          "Type": "TURRET",
+          "MainArc": "FORWARD",
+          "IsSpinal": false,
+          "Weapon": null
+        }
+      ],
+      "Bays": [
+        {
+          "Size": 3,
+          "Count": 2,
+          "Arcs": [ "FORWARD" ],
+          "Craft": null
+        },
+        {
+          "Size": 3,
+          "Count": 2,
+          "Arcs": [ "REAR" ],
+          "Craft": null
+        },
+        {
+          "Size": 1,
+          "Count": 1,
+          "Arcs": [ "PORT", "STARBOARD", "REAR" ],
           "Craft": null
         }
       ]
