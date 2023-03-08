@@ -3,6 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace ShipSheets
 {
+    /// <summary>
+    /// A basic Craft that can be deployed. Has no other characteristics.
+    /// </summary>
     public class Deployable : Craft
     {
         [JsonConstructor]

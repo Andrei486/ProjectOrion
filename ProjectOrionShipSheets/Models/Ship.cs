@@ -22,6 +22,19 @@ namespace ShipSheets
         public int PointCost { get; set; }
         public Dictionary<string, string> Traits { get; }
 
+        /// <summary>
+        /// Creates a new Ship.
+        /// </summary>
+        /// <param name="name">the name of the Ship</param>
+        /// <param name="stats">the stats of the Ship, unset stats default to 0</param>
+        /// <param name="class">the Ship's class</param>
+        /// <param name="mounts">the Ship's mounts</param>
+        /// <param name="bays">the Ship's bays</param>
+        /// <param name="systemSlots">the Ship's maximum system slots</param>
+        /// <param name="pointCost">the Ship's point cost to deploy</param>
+        /// <param name="traits">the Ship's non-default traits</param>
+        /// <param name="systems">the Ship's non-default equipped systems</param>
+        /// <param name="identifier">the Ship's identifier, a string to tell it apart from others of the same template</param>
         [JsonConstructor]
         public Ship(string name, Dictionary<ShipStat, int> stats, 
             ShipClass @class, Mount[] mounts, Bay[] bays, 

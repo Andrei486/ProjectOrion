@@ -24,6 +24,16 @@ namespace ShipSheets
         private string[] _tags;
         public string[] Tags { get { return _tags; } set { _tags = value; } }
 
+        /// <summary>
+        /// Creates a new Craft.
+        /// </summary>
+        /// <param name="name">the name of the Craft</param>
+        /// <param name="stats">the stats of the Craft, unset or non-applicable stats default to 0</param>
+        /// <param name="size">the size of the Craft</param>
+        /// <param name="ammoCost">the ammo cost to deploy the Craft</param>
+        /// <param name="powerCost">the power cost to deploy the Craft</param>
+        /// <param name="description">a description of the Craft</param>
+        /// <param name="tags">tags applicable to the Craft</param>
         [JsonConstructor]
         public Craft(string name, Dictionary<ShipStat, int> stats, int size, int ammoCost, int powerCost, string description="", string[] tags=null)
         {
